@@ -1,0 +1,24 @@
+@import "../../Config/variables.scss";
+@import "../../Config/mixins/mediaqueriesnations.scss";
+
+.statuspage-container {
+  width: 100%;
+  min-height: 70vh;
+  background-color: $light;
+  display: flex;
+  justify-content: center;
+}
+
+.status_page_title {
+  width: 80%;
+  font-size: 1.7rem;
+  font-weight: 100;
+  .statuspage_online {
+    color: $green;
+    font-weight: 900;
+  }
+  .statuspage_offline {
+    color: $red;
+    font-weight: 900;
+  }
+}

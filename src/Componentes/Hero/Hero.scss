@@ -1,0 +1,97 @@
+@import "../../Config/variables.scss";
+@import "../../Config/mixins/mediaqueries.scss";
+
+.HeroContainer_hero {
+  background-color: $light;
+  .heroCont_hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    height: 80vh;
+    z-index: 1;
+    width: 100%;
+    max-width: 1200px;
+    padding-right: 24px;
+    padding-left: 24px;
+    @include tablet {
+      grid-template-columns: 1fr;
+      height: 100%;
+    }
+    .LeftContainer_hero {
+      width: 100%;
+      line-height: 1.2;
+
+      @include tablet {
+        padding: 5rem 0;
+      }
+
+      @include mobile {
+        line-height: 1.5;
+      }
+
+      h1 {
+        font-size: 4rem;
+        color: $green;
+
+        @include mobile {
+          font-size: 1.5rem;
+        }
+      }
+
+      h2 {
+        font-size: 2rem;
+        color: $dark;
+        font-weight: 100;
+        margin-top: 1rem;
+        @include mobile {
+          font-size: 1rem;
+        }
+      }
+      .btn_hero {
+        font-size: 1rem;
+        background-color: $green;
+        padding: 14px 32px;
+        border: none;
+        border-radius: 4px;
+        color: $light;
+        margin-top: 2rem;
+        cursor: pointer;
+        position: relative;
+        transition: all 0.3s;
+        outline: none;
+      }
+
+      .btn_hero p {
+        position: relative;
+        z-index: 2;
+        color: $light;
+        text-decoration: none;
+      }
+
+      .btn_hero:after {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background: $darkblue;
+        transition: all 0.3s;
+        border-radius: 4px;
+      }
+
+      .btn_hero:hover:after {
+        width: 100%;
+      }
+    }
+    .RigthContainer_right {
+      text-align: center;
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}

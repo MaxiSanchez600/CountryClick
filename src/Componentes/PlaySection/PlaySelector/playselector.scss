@@ -1,0 +1,19 @@
+@import "../../../Config/variables.scss";
+@import "../../../Config/mixins/mediaqueriesnations.scss";
+
+.playselector_container {
+  padding-top: 7rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: $light;
+  min-height: 80vh;
+  position: relative;
+}
+
+.playselector_goback {
+  font-size: 3rem;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}

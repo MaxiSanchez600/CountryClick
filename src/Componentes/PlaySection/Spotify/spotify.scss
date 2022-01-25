@@ -1,0 +1,131 @@
+@import "../../../Config/variables.scss";
+@import "../../../Config/mixins/mediaqueriesnations.scss";
+
+.message_container {
+  width: 280px;
+  .playconteinerdos_play {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1 {
+      text-align: center;
+      width: 100%;
+      color: $green;
+      font-size: 3.2rem;
+      padding: 1rem;
+      font-weight: 100;
+      span {
+        font-weight: 700;
+      }
+      @include tablet {
+        font-size: 2.5rem;
+      }
+      @include mobile {
+        font-size: 2rem;
+      }
+    }
+    .imgcontainer_play {
+      width: 100%;
+      padding: 1rem;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      @include tablet {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      @include mobile {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      grid-gap: 5rem;
+      img {
+        cursor: pointer;
+        width: 90%;
+        transition: 0.3s all ease;
+      }
+      img:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+
+.youtube_goback {
+  font-size: 2rem;
+  color: $dark;
+  transition: all 0.5s ease-out;
+}
+.youtube_goback:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  color: $lightgreen;
+}
+.spotify_title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 100;
+}
+
+.spotify_inputs {
+  height: 200px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  div {
+    align-items: center;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+  }
+  .message_input_alone {
+    font-family: $Kumbh;
+    color: green;
+    &:hover {
+      color: red;
+    }
+    &:focus {
+      color: green;
+      background-color: green;
+    }
+  }
+}
+.spotify_select {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  .basic-single {
+    width: 89%;
+    align-items: center;
+  }
+  .spotify_error {
+    font-weight: 100;
+    color: $red;
+    font-size: 1rem;
+    span {
+      font-weight: 900;
+    }
+  }
+  .spotify_button {
+    margin-top: 1rem;
+    font-family: $Kumbh;
+    background-color: $green;
+    &:hover {
+      background-color: $darkblue;
+    }
+  }
+}
+
+.message_error {
+  font-weight: 100;
+  color: $red;
+  font-size: 1rem;
+  span {
+    font-weight: 900;
+  }
+}
