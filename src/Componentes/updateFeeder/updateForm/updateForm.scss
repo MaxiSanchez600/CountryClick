@@ -1,0 +1,62 @@
+@import "../../../Config/variables.scss";
+@import "../../../Config/mixins/mediaqueriesReal.scss";
+
+.updateForm_container {
+  margin: 0 auto;
+  z-index: 1;
+  width: 100%;
+  max-width: 1200px;
+  padding-right: 24px;
+  padding-left: 24px;
+  h1 {
+    text-align: center;
+    font-weight: 600;
+    font-size: 3em;
+    color: $green;
+    @include mobile {
+      font-size: 2em;
+    }
+  }
+  h2 {
+    text-align: center;
+    color: $dark;
+    font-weight: 100;
+    font-size: 1.5em;
+    @include mobile {
+      font-size: 1.3em;
+    }
+  }
+  .updateForm_subContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.updateForm_actionsContainer {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2em;
+  flex-direction: row;
+  align-items: center;
+  @include tablet {
+    flex-direction: column;
+  }
+  div {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    p {
+      text-align: center;
+      @include mobile {
+        width: 200px;
+      }
+      span {
+        font-weight: 900;
+      }
+    }
+  }
+}

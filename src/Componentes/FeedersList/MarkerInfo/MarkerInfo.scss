@@ -1,0 +1,39 @@
+@import "../../../Config/variables.scss";
+@import "../../../Config/mixins/mediaqueries.scss";
+
+.markerInfo_Container {
+  background-color: $green;
+  border-radius: 8px;
+  width: 30%;
+  height: 100%;
+  img {
+    width: 50%;
+  }
+  .map_mapContainer {
+    display: flex;
+    justify-content: center;
+    padding: 24px;
+  }
+  h2 {
+    font-weight: 100;
+    font-size: 2.3rem;
+    color: $dark;
+    display: flex;
+    justify-content: center;
+
+    span {
+      font-weight: 800;
+      font-size: 2.5rem;
+      color: $dark;
+      display: flex;
+      justify-content: center;
+
+      @include mobile {
+        font-size: 1.5rem;
+      }
+    }
+    @include mobile {
+      font-size: 1.5rem;
+    }
+  }
+}

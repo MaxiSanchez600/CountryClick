@@ -1,0 +1,29 @@
+@import "../../../../Config/variables.scss";
+@import "../../../../Config/mixins/mediaqueries.scss";
+
+.updateSection_container {
+  margin: 0 auto;
+  z-index: 1;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  p {
+    color: $error;
+    font-size: 0.8em;
+    font-weight: 600;
+  }
+  button {
+    top: 0px;
+  }
+  .updateSection_button {
+    margin-top: 2em;
+  }
+  .updateSection_back {
+    margin-bottom: 1em;
+  }
+  img {
+    width: 60%;
+    margin: 0 auto;
+  }
+}
