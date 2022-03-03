@@ -16,6 +16,8 @@ export default function Map() {
   const { feedersList, setSelectedFeeder, selectedFeeder } =
     useContext(contextFeeders);
 
+  console.log(feedersList);
+
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
     googleMapsApiKey: URL_API_GOOGLE_MAPS,
@@ -75,7 +77,6 @@ export default function Map() {
                       lng: parseFloat(feeder.longitude),
                     }}
                     onClick={() => onMarkerClick(feeder)}
-                    opacity={0.5}
                   ></Marker>
                 </AnchorLink>
               );
