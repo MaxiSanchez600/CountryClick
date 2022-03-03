@@ -1,39 +1,35 @@
 @import "../../../Config/variables.scss";
-@import "../../../Config/mixins/mediaqueries.scss";
+@import "../../../Config/mixins/mediaqueriesReal.scss";
 
 .markerInfo_Container {
-  background-color: $green;
   border-radius: 8px;
-  width: 30%;
+  width: 100%;
   height: 100%;
-  img {
-    width: 50%;
-  }
-  .map_mapContainer {
-    display: flex;
-    justify-content: center;
-    padding: 24px;
-  }
-  h2 {
-    font-weight: 100;
-    font-size: 2.3rem;
-    color: $dark;
-    display: flex;
-    justify-content: center;
+  margin-top: 1.5em;
+}
 
-    span {
-      font-weight: 800;
-      font-size: 2.5rem;
-      color: $dark;
-      display: flex;
-      justify-content: center;
+.markerInfo_CardItemsContainer {
+  display: flex;
+  flex-direction: row;
+  @include midscreen {
+    flex-direction: column;
+  }
+  .markerInfo_CardTextContainer {
+    margin-left: 1em;
+    width: 60%;
+    overflow-wrap: break-word;
+    @include tablet {
+      min-width: 100%;
+      margin: 0;
+    }
+  }
+}
 
-      @include mobile {
-        font-size: 1.5rem;
-      }
-    }
-    @include mobile {
-      font-size: 1.5rem;
-    }
+.markerInfo_img {
+  border-radius: 8px;
+  min-width: 40%;
+  @include mobile {
+    min-width: 100%;
+    margin: 0;
   }
 }

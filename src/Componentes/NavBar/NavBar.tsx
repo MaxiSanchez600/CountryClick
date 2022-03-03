@@ -24,6 +24,9 @@ export default function Navbar() {
             <Link className="listitem_navbarmobile" to="/">
               Home
             </Link>
+            <Link className="listitem_navbarmobile" to="/agregar">
+              Agrega un comedero
+            </Link>
           </div>
         </nav>
       }
@@ -37,6 +40,9 @@ export default function Navbar() {
           <div className="navbarelements_navbar">
             <Link className="listitem_navbar" to="/">
               Home
+            </Link>
+            <Link className="listitem_navbar" to="/agregar">
+              Agrega un comedero
             </Link>
           </div>
         </nav>

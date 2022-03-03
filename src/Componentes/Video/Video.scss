@@ -1,0 +1,86 @@
+@import "../../Config/variables.scss";
+@import "../../Config/mixins/mediaqueries.scss";
+
+.videoContainer_video {
+  background-color: $light;
+  .videoSubContainer_video {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    height: 60vh;
+    z-index: 1;
+    width: 100%;
+    max-width: 1200px;
+    padding-right: 24px;
+    padding-left: 24px;
+    @include tablet {
+      grid-template-columns: 1fr;
+      height: 100%;
+    }
+    .leftContainer_video {
+      width: 100%;
+      line-height: 1.2;
+
+      @include tablet {
+        padding: 5rem 0;
+      }
+
+      @include mobile {
+        line-height: 1.5;
+      }
+
+      h1 {
+        font-size: 3rem;
+        color: $green;
+
+        @include mobile {
+          font-size: 1.5rem;
+        }
+      }
+
+      h2 {
+        font-size: 1.3rem;
+        color: $dark;
+        font-weight: 100;
+        margin-top: 1rem;
+        @include mobile {
+          font-size: 1rem;
+        }
+        span {
+          font-size: 1.3rem;
+          color: $green;
+          font-weight: 800;
+          margin-top: 1rem;
+          @include mobile {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+    .rigthContainer_videot {
+      text-align: center;
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+  .wp_right_ainfo {
+    min-height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 24px;
+    h3 {
+      font-size: 1.2em;
+      font-weight: 100;
+      span {
+        font-weight: 900;
+      }
+    }
+  }
+}

@@ -135,3 +135,33 @@ export function getNewStatus(
       return Status.OK;
   }
 }
+
+export function getStatusDescription(status: Status) {
+  switch (status) {
+    case Status.OK:
+      return "El comedero se encuentra con comida y agua";
+    case Status.NO_OK:
+      return "El comedero se encuentra con algun problema";
+    case Status.FOOD_MISSING:
+      return "Al comedero le falta comida";
+    case Status.WATER_MISSING:
+      return "Al comedero le falta agua";
+    case Status.FW_MISSING:
+      return "Al comedero le falta comida y agua";
+  }
+}
+
+export function getStatusColor(status: Status) {
+  switch (status) {
+    case Status.OK:
+      return "#50723C";
+    case Status.NO_OK:
+      return "#e24036";
+    case Status.FOOD_MISSING:
+      return "#e24036";
+    case Status.WATER_MISSING:
+      return "#e24036";
+    case Status.FW_MISSING:
+      return "#e24036";
+  }
+}

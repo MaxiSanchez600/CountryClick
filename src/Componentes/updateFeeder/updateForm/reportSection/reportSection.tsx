@@ -101,7 +101,7 @@ export default function ReportSection() {
           <div></div>
           <Textarea
             label="Nueva descripcion"
-            placeholder="ej: Lo llene con comida, vi en la web que estaba vacio, se vacia rapido!"
+            placeholder="ej: Lo encontre sin comida mientras caminaba por la plaza, reporto para que alguien pueda verlo en la web y llenarlo."
             value={descripcion}
             onChange={(e) => onDescriptionChange(e.target.value)}
           />
@@ -112,18 +112,6 @@ export default function ReportSection() {
                 Lo encontre sin comida
                 <Radio.Description>
                   Selecciona esta opcion si lo encontraste sin comida.
-                </Radio.Description>
-              </Radio>
-              <Radio value={StatusValue.WATER_UPDATE_NO_FILL}>
-                Lo encontre sin agua
-                <Radio.Description>
-                  Selecciona esta opcion si lo encontraste sin agua.
-                </Radio.Description>
-              </Radio>
-              <Radio value={StatusValue.FW_UPDATE_NO_FILL}>
-                Lo encontre sin agua ni comida
-                <Radio.Description>
-                  Selecciona esta opcion si lo encontraste sin agua ni comida.
                 </Radio.Description>
               </Radio>
               <Radio value={StatusValue.PROBLEM}>

@@ -1,0 +1,62 @@
+@import "../../Config/variables.scss";
+@import "../../Config/mixins/mediaqueriesReal.scss";
+
+.how_container {
+  background-color: $green;
+  margin-top: 5em;
+  .how_subContainer {
+    margin: 0 auto;
+    padding: 24px;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h1 {
+      font-size: 2em;
+      font-weight: 900;
+      color: $light;
+      text-align: center;
+      @include mobile {
+        font-size: 1.5em;
+      }
+    }
+    h2 {
+      font-size: 1.5em;
+      font-weight: 100;
+      text-align: center;
+      color: $light;
+      @include mobile {
+        font-size: 1em;
+      }
+    }
+    .how_problemText {
+      margin-top: 1em;
+      font-size: 1.3em;
+      @include mobile {
+        font-size: 1em;
+      }
+    }
+    span {
+      font-weight: 900;
+    }
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+    }
+  }
+}
+
+.how_CardContainer {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  @include tablet {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

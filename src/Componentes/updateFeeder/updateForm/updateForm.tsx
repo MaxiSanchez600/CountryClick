@@ -23,7 +23,8 @@ export default function UpdateForm() {
               </Button>
               <p>
                 <span>Clickea aca</span> para reportar que lo encontraste sin
-                agua, sin comida o si tuvo algun problema.
+                comida o si tuvo algun problema (se mojo, se rompio, se trabo,
+                etc)
               </p>
             </div>
             <div>
@@ -32,7 +33,7 @@ export default function UpdateForm() {
               </Button>
               <p>
                 <span>Clickea aca</span> para actualizar si lo llenaste con
-                agua, comida o si solucionaste el problema que tenia.
+                comida o si solucionaste el problema que tenia.
               </p>
             </div>
           </div>

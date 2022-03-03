@@ -1,111 +1,96 @@
-@import '../../Config/variables.scss';
-@import '../../Config/mixins/mediaqueries.scss';
+@import "../../Config/variables.scss";
+@import "../../Config/mixins/mediaqueries.scss";
 
-
-%align-center{
-    display: flex;
-    align-items: center;
+%align-center {
+  display: flex;
+  align-items: center;
 }
 
-%mobile{
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    position: absolute;
-    width: 100%;
-    background-color: red;
-    z-index: 99;
-    transition: all 0.5s ease;
+%mobile {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: absolute;
+  width: 100%;
+  background-color: red;
+  z-index: 99;
+  transition: all 0.5s ease;
 }
 
-.navbar_navbar{
-    background-color: $light;
-    height: 10vh;
-    display: flex;
-    justify-content: space-between;
-    padding: 0.5rem calc((100vw - 1200px) / 2);
-    z-index: 10;
-    position: relative;
+.navbar_navbar {
+  background-color: $light;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem calc((100vw - 1200px) / 2);
+  z-index: 10;
+  position: relative;
 
-    .navbarlogo_navbar{
-        cursor: pointer;
-        text-decoration: none;
-        font-size: 1.1rem;
+  .navbarlogo_navbar {
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: $green;
+    margin-left: 24px;
+    @extend %align-center;
+
+    &:hover {
+      transition: all 0.3s ease 0s;
+      color: $darkblue;
+    }
+  }
+
+  .mobilemenu_navbar {
+    opacity: 0;
+  }
+
+  .navbarelements_navbar {
+    @extend %align-center;
+    list-style: none;
+    text-align: center;
+    margin-right: 24px;
+    .listitem_navbar {
+      text-decoration: none;
+      color: $dark;
+      @extend %align-center;
+      justify-content: center;
+      padding: 0 1rem;
+      &:hover {
+        transition: all 0.3s ease 0s;
         color: $green;
-        margin-left: 24px;
-        @extend %align-center;
-
-        &:hover{
-            transition: all 0.3s ease 0s;
-            color: $darkblue;
-        }
+      }
     }
-
-    .mobilemenu_navbar{
-        opacity: 0;
-        @include tablet{
-            cursor: pointer;
-            opacity: 1;
-            position: absolute;
-            top: 22px;
-            right: 20px;
-            font-size: 2rem;
-            color: $dark;
-        }
-    }
-
-    .navbarelements_navbar{
-        @extend %align-center;
-        list-style: none;
-        text-align: center;
-        margin-right: 24px;
-
-        @include tablet{
-            display: none;
-        }
-        .listitem_navbar{
-            text-decoration: none;
-            color: $dark;
-            @extend %align-center;
-            justify-content: center;
-            padding: 0 1rem;
-            &:hover {
-                transition: all 0.3s ease 0s;
-                color: $green;
-            }
-
-        }
-    }
+  }
 }
 
-.mobilenavbar_navbar{
-    display: flex;
-    height: 100vh;
+.mobilenavbar_navbar {
+  display: flex;
+  height: 100vh;
+  position: absolute;
+  width: 100%;
+  background-color: $dark;
+  z-index: 99;
+  transition: all 0.5s ease;
+  align-items: center;
+  .closeicon_navbar {
     position: absolute;
+    top: 20px;
+    right: 20px;
+    color: $light;
+    font-size: 2rem;
+  }
+  div {
     width: 100%;
-    background-color: $dark;
-    z-index: 99;
-    transition: all 0.5s ease;
+    height: 30%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
     align-items: center;
-    .closeicon_navbar{
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        color: $light;
-        font-size: 2rem;
+    .listitem_navbarmobile {
+      color: $light;
+      text-decoration: none;
+      font-size: 1.8rem;
+      font-weight: 100;
     }
-    div{
-        width: 100%;
-        height: 30%;
-        display: flex;
-        justify-content: space-around;
-        flex-direction: column;
-        align-items: center;
-        .listitem_navbarmobile{
-            color: $light;
-            text-decoration: none;
-            font-size: 1.8rem;
-            font-weight: 100;
-        }
-    }
+  }
 }

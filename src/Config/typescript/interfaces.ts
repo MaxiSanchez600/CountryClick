@@ -21,6 +21,7 @@ export interface FeedersWithReport {
   latitude: string;
   longitude: string;
   isOn: boolean;
+  description: string;
   FeederReportId: number;
   FeederReport: FeederReport;
 }

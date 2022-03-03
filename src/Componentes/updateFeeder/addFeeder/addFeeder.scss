@@ -1,0 +1,105 @@
+@import "../../../Config/variables.scss";
+@import "../../../Config/mixins/mediaqueriesReal.scss";
+
+.addFeeder_container {
+  margin: 0 auto;
+  z-index: 1;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  h1 {
+    font-size: 2em;
+    text-align: center;
+    color: $green;
+    text-decoration: underline;
+    @include mobile {
+      font-size: 1.5em;
+    }
+  }
+  h2 {
+    font-size: 1.5em;
+    font-weight: 100;
+    text-align: center;
+    margin-bottom: 3em;
+    @include mobile {
+      font-size: 1.2em;
+    }
+  }
+  p {
+    color: $error;
+    font-size: 0.8em;
+    font-weight: 600;
+  }
+  button {
+    top: 0px;
+  }
+  .addFeeder_button {
+    margin-top: 2em;
+  }
+  .addFeeder_back {
+    margin-bottom: 1em;
+  }
+  .location-search-input {
+    background-color: #f4f4f4;
+    padding: 12px;
+    border: none;
+    font-family: $Kumbh;
+    font-size: 0.9em;
+    width: 100%;
+    height: 40px;
+    border-radius: 1em;
+    color: $dark;
+    ::placeholder {
+      color: #798181;
+    }
+    text-align: center;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .addFeeder_suggestion {
+    color: $dark;
+    font-size: 0.9em;
+    padding: 12px;
+    text-align: center;
+  }
+
+  .addFeeder_locationTitle {
+    font-size: 1.2em;
+    color: $dark;
+    font-weight: 100;
+    text-align: center;
+    @include mobile {
+      font-size: 1em;
+    }
+    span {
+      font-weight: 900;
+      text-decoration: underline;
+    }
+  }
+  .autocomplete-dropdown-container {
+    max-width: 600px;
+  }
+  .addFeeder_fileSelector {
+    background-color: rebeccapurple;
+    width: 10%;
+  }
+  input[type="file"] {
+    display: none;
+  }
+  .custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+  }
+
+  .file-preview {
+    margin: 0 10px;
+  }
+  .selectedpicture {
+    color: seagreen;
+  }
+}

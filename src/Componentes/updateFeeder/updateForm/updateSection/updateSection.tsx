@@ -56,7 +56,6 @@ export default function UpdateSection() {
             newStatus
           );
           console.log("DESCRIPCION: ", descripcion);
-
           try {
             await apiFetchUpdateReport({
               status: newStatus,
@@ -112,18 +111,6 @@ export default function UpdateSection() {
                 Rellene comida
                 <Radio.Description>
                   Selecciona esta opcion si le rellenaste la comida.
-                </Radio.Description>
-              </Radio>
-              <Radio value={StatusValue.WATER_UPDATE_FILL}>
-                Rellene agua
-                <Radio.Description>
-                  Selecciona esta opcion si le rellenaste el agua.
-                </Radio.Description>
-              </Radio>
-              <Radio value={StatusValue.FW_UPDATE_FILL}>
-                Rellene agua y comida
-                <Radio.Description>
-                  Selecciona esta opcion si rellenaste el agua y la comida.
                 </Radio.Description>
               </Radio>
               <Radio value={StatusValue.FIX}>

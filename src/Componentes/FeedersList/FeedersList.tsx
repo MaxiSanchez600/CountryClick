@@ -2,10 +2,11 @@ import { useEffect, useContext, useState } from "react";
 import { apiFetchGetFeeders } from "../../Helpers/requests";
 import { contextFeeders } from "../Context/ReactContext";
 import "./FeedersList.scss";
-import Info from "./Info/Info";
 import Map from "./Map/Map";
 import MarkerInfo from "./MarkerInfo/MarkerInfo";
 import Error from "../Error/error";
+import Loading from "../../Config/images/loading.svg";
+
 export default function FeedersList() {
   const { setFeedersList, setSelectedFeeder } = useContext(contextFeeders);
   const [error, setError] = useState<boolean>(false);
@@ -31,21 +32,26 @@ export default function FeedersList() {
     getFeeders();
   }, []);
   return (
-    <div className="feederContainer_hero" id="things">
-      <h2>Nuestros comederos</h2>
-      {loading ? (
-        <h1>LOADING</h1>
-      ) : error ? (
-        <Error></Error>
-      ) : (
-        <>
-          <Map></Map>
-          <div className="feedersList_feederInfoContainer" id="feederInfo">
-            <MarkerInfo></MarkerInfo>
-            <Info></Info>
-          </div>
-        </>
-      )}
+    <div className="feederContainer_container" id="things">
+      <div className="feederContainer_subContainer">
+        {loading ? (
+          <img alt="Loading" src={Loading} />
+        ) : error ? (
+          <Error></Error>
+        ) : (
+          <>
+            <h1>Nuestros comederos</h1>
+            <h2>
+              Clickea cada uno en el mapa para ver su informacion y estado
+              actual
+            </h2>
+            <Map></Map>
+            <div className="feedersList_feederInfoContainer" id="feederInfo">
+              <MarkerInfo></MarkerInfo>
+            </div>
+          </>
+        )}
+      </div>
     </div>
   );
 }

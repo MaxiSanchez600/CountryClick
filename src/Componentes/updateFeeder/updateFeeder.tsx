@@ -7,6 +7,7 @@ import "./updateFeeder.scss";
 import UpdateForm from "./updateForm/updateForm";
 import Error from "../Error/error";
 import Loading from "../../Config/images/loading.svg";
+import AddFeeder from "./addFeeder/addFeeder";
 
 interface paramData {
   id: string;
@@ -42,7 +43,7 @@ export default function UpdateFeeder() {
           selectedFeeder.isOn ? (
             <UpdateForm></UpdateForm>
           ) : (
-            <h1>Form de Creacion</h1>
+            <AddFeeder />
           )
         ) : error ? (
           <Error></Error>
